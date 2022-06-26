@@ -1,7 +1,18 @@
 import serial
-arduino = serial.Serial('com3', 9600)
+import time
+import tkinter
 
-while(True):
-    a=arduino.readline()
-    a = a[:-2].decode("utf-8")
-    print(a)
+tk = tkinter.Tk()
+tk.title("Arduino")
+tk.geometry("300x300")
+
+py_serial = serial.Serial(
+    
+    # Window
+    port='COM3',
+    
+    # 보드 레이트 (통신 속도)
+    baudrate=9600,
+)
+while True:
+    print(py_serial.readline())

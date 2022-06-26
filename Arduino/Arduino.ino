@@ -9,8 +9,12 @@ void loop() {
   // put your main code here, to run repeatedly:
   if (data == '1') {
    digitalWrite (13, HIGH);
+   delay(100);
+   Serial.print(data);
   }
   else if (data == '0') {
   digitalWrite (13, LOW);
+  delay(100);
+  Serial.print(data);
   }
 }
